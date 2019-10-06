@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 N = int(input().split()[0])
 
 if N == 1:
