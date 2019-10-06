@@ -19,7 +19,12 @@
       "id": "abc119_b",
       "label": "B",
       "title": "Digital Gifts",
-      "url": "https://atcoder.jp/contests/abc119/tasks/abc119_b"
+      "url": "https://atcoder.jp/contests/abc119/tasks/abc119_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc119_c",
