@@ -1,0 +1,38 @@
+{
+  "contest": {
+    "id": "abc044",
+    "title": "AtCoder Beginner Contest 044",
+    "url": "https://atcoder.jp/contests/abc044"
+  },
+  "tasks": [
+    {
+      "id": "abc044_a",
+      "label": "A",
+      "title": "高橋君とホテルイージー / Tak and Hotels (ABC Edit)",
+      "url": "https://atcoder.jp/contests/abc044/tasks/abc044_a"
+    },
+    {
+      "id": "abc044_b",
+      "label": "B",
+      "title": "美しい文字列 / Beautiful Strings",
+      "url": "https://atcoder.jp/contests/abc044/tasks/abc044_b"
+    },
+    {
+      "id": "arc060_a",
+      "label": "C",
+      "title": "高橋君とカード / Tak and Cards",
+      "url": "https://atcoder.jp/contests/abc044/tasks/arc060_a",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc060_b",
+      "label": "D",
+      "title": "桁和 / Digit Sum",
+      "url": "https://atcoder.jp/contests/abc044/tasks/arc060_b"
+    }
+  ]
+}
