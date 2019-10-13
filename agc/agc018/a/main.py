@@ -24,11 +24,11 @@ def judge(w_list, k):
     elif k % 2 == 0 and 2 in w_list:
         return True, w_list
     else:
-        for w in w_list:
-            if w + K in w_list:
-                return True, w_list
-
-        return False, w_list
+        ww_list = set([w + K for w in w_list])
+        if ww_list & set(w_list):
+            return True, w_list
+        else:
+            return False, w_list
 
 
 w_list = a_list
