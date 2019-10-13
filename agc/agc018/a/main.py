@@ -24,6 +24,10 @@ def judge(w_list, k):
     elif k % 2 == 0 and 2 in w_list:
         return True, w_list
     else:
+        for w in w_list:
+            if w + K in w_list:
+                return True, w_list
+
         return False, w_list
 
 
@@ -41,4 +45,5 @@ while True:
             break
 
 ans = "POSSIBLE" if is_ok else "IMPOSSIBLE"
+
 print(ans)
