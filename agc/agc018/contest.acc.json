@@ -9,7 +9,12 @@
       "id": "agc018_a",
       "label": "A",
       "title": "Getting Difference",
-      "url": "https://atcoder.jp/contests/agc018/tasks/agc018_a"
+      "url": "https://atcoder.jp/contests/agc018/tasks/agc018_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "agc018_b",
