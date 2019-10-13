@@ -13,22 +13,14 @@ def judge(w_list, k):
     for i in range(len(w_list) - 1):
         w_list += [abs(w_list[i] - w_list[i + 1])]
 
-    w_list = sorted(list(set(w_list)))
-
     if k in w_list:
         return True, w_list
-    elif 1 in w_list:
-        return True, w_list
-    elif abs(w_list[0] - w_list[-1]) < K:
-        return False, w_list
-    elif k % 2 == 0 and 2 in w_list:
+    w_list = sorted(list(set(w_list)))
+    ww_list = set([w + K for w in w_list])
+    if ww_list & set(w_list):
         return True, w_list
     else:
-        ww_list = set([w + K for w in w_list])
-        if ww_list & set(w_list):
-            return True, w_list
-        else:
-            return False, w_list
+        return False, w_list
 
 
 w_list = a_list
@@ -40,8 +32,11 @@ while True:
         break
     else:
         if abs(w_list[0] - w_list[-1]) < K:
+            # 操作によって作れる差分よりKの方が大きいので
+            # これ以上操作してもKを作れない
             break
         if w_list == org_w_list:
+            # これ以上操作しても変化がない
             break
 
 ans = "POSSIBLE" if is_ok else "IMPOSSIBLE"
