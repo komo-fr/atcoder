@@ -7,16 +7,14 @@ l_list = list(map(int, input().split()))
 l_list = sorted(l_list)
 p_list = []
 total = 0
-for a_i, a in enumerate(l_list):
-    for b_i, b in enumerate(l_list):
-        if a_i == b_i:
-            continue
-        c_end_i = bisect.bisect_left(l_list, a + b)
-        c_start_i = bisect.bisect_right(l_list, abs(a - b))
-        total += c_end_i - c_start_i
 
+for a_i, a in enumerate(l_list[::-1]):
+    # 1番目に長い辺を固定
+    for b_i, b in enumerate(l_list[-(a_i + 2) :: -1]):
+        # 2番目に長い辺を固定
+        w_list = l_list[: -(a_i + 2)]
+        c_i = bisect.bisect_right(w_list, abs(a - b))
+        total += len(w_list) - c_i
 
-# p_list = ["{}_{}_{}".format(p[0], p[1], p[2]) for p in p_list]
 ans = total
-
 print(ans)
