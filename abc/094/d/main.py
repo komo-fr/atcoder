@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import math
+import bisect
 import numpy as np
 
 n = int(input().split()[0])
@@ -13,29 +14,32 @@ def C(n, r):
 
 a_list = sorted(a_list)
 max_comb = -float("inf")
+a_list = sorted(a_list, reverse=True)
+ai = a_list[0]
+w_list = a_list[1:]
+w_list = sorted(w_list)
 
-for i, ai in enumerate(a_list):
-    # aiを固定する
-    # aiが偶数の場合は、ai/2、
-    # aiが奇数の場合は、(ai-1)/2または(ai+1)/2に
-    # 一番近い値が答えになる
-    if ai % 2 == 0:
-        idx = np.abs(np.asarray(a_list) - ai // 2).argmin()
-        aj = a_list[idx]
+# 真ん中に一番近い値を取得する
+if ai % 2 == 0:
+    if ai // 2 in w_list:
+        aj = ai // 2
     else:
-        target_1 = (ai - 1) // 2
-        idx_1 = np.abs(np.asarray(a_list) - target_1).argmin()
-        aj = a_list[idx_1]
-        target_2 = (ai + 1) // 2
-        idx_2 = np.abs(np.asarray(a_list) - target_2).argmin()
+        idx = bisect.bisect_left(w_list, ai // 2)
+        if idx + 1 < len(a_list):
+            if abs(ai // 2 - a_list[idx + 1]) < abs(ai // 2 - a_list[idx]):
+                idx = idx + 1
+        aj = a_list[idx]
+else:
+    # 奇数の場合、候補が2つある
+    target_1 = (ai - 1) // 2
+    idx_1 = bisect.bisect_left(w_list, target_1)
+    aj = w_list[idx_1]
 
-        if abs(a_list[idx_1] - target_1) > abs(a_list[idx_2] - target_2):
-            aj = a_list[idx_2]
+    target_2 = (ai + 1) // 2
+    idx_2 = bisect.bisect_left(w_list, target_2)
 
-    comb = C(ai, aj)
-    if max_comb < comb:
-        max_comb = comb
-        comb_set = (ai, aj)
+    if abs(a_list[idx_1] - target_1) > abs(a_list[idx_2] - target_2):
+        aj = w_list[idx_2]
 
 ans = "{} {}".format(ai, aj)
 print(ans)
