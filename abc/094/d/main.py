@@ -21,25 +21,21 @@ w_list = sorted(w_list)
 
 # 真ん中に一番近い値を取得する
 if ai % 2 == 0:
-    if ai // 2 in w_list:
-        aj = ai // 2
-    else:
-        idx = bisect.bisect_left(w_list, ai // 2)
-        if idx + 1 < len(a_list):
-            if abs(ai // 2 - a_list[idx + 1]) < abs(ai // 2 - a_list[idx]):
-                idx = idx + 1
-        aj = a_list[idx]
+    idx = np.abs(np.asarray(w_list) - ai // 2).argmin()
+    aj = w_list[idx]
 else:
-    # 奇数の場合、候補が2つある
-    target_1 = (ai - 1) // 2
-    idx_1 = bisect.bisect_left(w_list, target_1)
-    aj = w_list[idx_1]
+    t_1 = (ai - 1) // 2
+    idx_1 = np.abs(np.asarray(w_list) - t_1).argmin()
+    aj_1 = w_list[idx_1]
 
-    target_2 = (ai + 1) // 2
-    idx_2 = bisect.bisect_left(w_list, target_2)
+    t_2 = (ai + 1) // 2
+    idx_2 = np.abs(np.asarray(w_list) - t_2).argmin()
+    aj_2 = w_list[idx_2]
 
-    if abs(a_list[idx_1] - target_1) > abs(a_list[idx_2] - target_2):
-        aj = w_list[idx_2]
+    if abs(t_1 - aj_1) < abs(t_2 - aj_2):
+        aj = aj_1
+    else:
+        aj = aj_2
 
 ans = "{} {}".format(ai, aj)
 print(ans)
