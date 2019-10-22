@@ -12,14 +12,9 @@ b_list = [0] * (N + 1)
 for i in range(N):
     # 大きい方から決めていく
     idx = N - i
-    total = 0
-    for j, b in enumerate(b_list[::idx]):
-        # idx + 1の倍数のボールの個数を数える
-        if j == 0:
-            continue
-        total += b
+    total = sum(b_list[idx : N + 1 : idx])
 
-    if total % idx != a_list[idx]:
+    if total % 2 != a_list[idx]:
         b_list[idx] = 1
 
 idx_list = [str(i) for i, b in enumerate(b_list) if b == 1]
