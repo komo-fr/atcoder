@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
 
-1
 N = int(input().split()[0])
 a_list = list(map(int, input().split()))
 
 # 最初が0から始まる場合
-b_list = [0] * N
-b_list[-1] = a_list[-1]
+a_list = [0] + a_list
+b_list = [0] * (N + 1)
+# インデックスがずれるのがややこしいので、
+# b_list[0]は欠番として1始まりで考えていく
 
 for i in range(N):
     # 大きい方から決めていく
-    idx = N - (i + 1)
+    idx = N - i
     total = 0
-    for j, bj in enumerate(b_list[:: idx + 1]):
+    for j, b in enumerate(b_list[::idx]):
         # idx + 1の倍数のボールの個数を数える
-        total += b_list[j]
+        if j == 0:
+            continue
+        total += b
 
-    if total % (idx + 1) != a_list[idx]:
+    if total % idx != a_list[idx]:
         b_list[idx] = 1
 
-idx_list = [str(i + 1) for i, b in enumerate(b_list) if b == 1]
-ans = sum(b_list)
+idx_list = [str(i) for i, b in enumerate(b_list) if b == 1]
+ans = sum(b_list[1:])
 print(ans)
-print(" ".join(idx_list))
+if ans != 0:
+    print(" ".join(idx_list))
