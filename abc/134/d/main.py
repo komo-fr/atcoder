@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+1
 N = int(input().split()[0])
 a_list = list(map(int, input().split()))
 
@@ -7,11 +8,11 @@ a_list = list(map(int, input().split()))
 b_list = [0] * N
 b_list[-1] = a_list[-1]
 
-for i in range(1, N + 1):
+for i in range(N):
     # 大きい方から決めていく
-    idx = N - i
+    idx = N - (i + 1)
     total = 0
-    for j in b_list[:: idx + 1]:
+    for j, bj in enumerate(b_list[:: idx + 1]):
         # idx + 1の倍数のボールの個数を数える
         total += b_list[j]
 
