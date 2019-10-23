@@ -18,13 +18,15 @@ max_a, max_a_b = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
 
 while H > 0:
     if max_a >= max_b:
+        # (B)(D)パターン
         # 4, 5
         # 10, 6
         # や
         # 10, 5
         # 3, 6
         # 投げるより普通に殴った方が良いので迷わず殴る
-        count += math.ceil(H / max_a)
+        count += H // max_a
+        count = count + 1 if H % max_a != 0 else count
         break
 
     # 以下、a < bが担保されている
@@ -38,7 +40,7 @@ while H > 0:
     if len(k_list) == 1:
         # あと1本しかない場合は、投げるのは温存して殴るしかない
         # 3, 5
-        count += 1
+        count += 1  # 投げるターンの1回
         count += (H - k_list[0][1]) // k_list[0][0]
         count = count + 1 if (H - k_list[0][1]) % k_list[0][0] != 0 else count
         break
