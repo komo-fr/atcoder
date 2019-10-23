@@ -8,7 +8,7 @@ for _ in range(N):
     a, b = list(map(int, input().split()))
     ab_list.append((a, b))
 
-k_list = sorted(ab_list, key=lambda x: x[1], reverse=True)
+k_list = sorted(ab_list, key=lambda x: (x[1], -x[0]), reverse=True)
 count = 0
 
 # bが最大の刀のa
@@ -45,7 +45,17 @@ while H > 0:
         count = count + 1 if (H - k_list[0][1]) % k_list[0][0] != 0 else count
         break
 
+    if max_a == max_b_a and k_list[0][0] > k_list[1][1]:
+        # (E)パターン
+        count += 1  # 投げるターンの1回
+        count += (H - k_list[0][1]) // k_list[0][0]
+        count = count + 1 if (H - k_list[0][1]) % k_list[0][0] != 0 else count
+        break
+
     if max_a >= max_b_a and max_a_b != max_b:
+        # (A)パターン
+        # max_aより大きいbがあれば積極的に投げ続ける
+        # (E)パターンに移行するか、Hが0になるまでやる
         # 他に殴り力が高い刀があるので、投げ力が高い刀でも迷いなく投げていい
         # a < b は担保されている
         # 4, 5
@@ -57,28 +67,29 @@ while H > 0:
         max_b_a, max_b = k_list[0][0], k_list[0][1]
         max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
         continue
-    else:
-        # 殴り力でも投げ力でも1位
-        # ただし殴り力1位が投げ力2位より高いとは限らない
 
-        if max_b_a >= k_list[1][0]:
-            # 殴り力1位が投げ力2位より高い場合、最後に投げるまで殴り続けた方が良い
-            # 2, 4
-            # 5, 6
-            count += 1
-            count += (H - k_list[0][1]) // k_list[0][0]
-            count = count + 1 if (H - k_list[0][1]) % k_list[0][0] != 0 else count
-            break
-        else:
-            # 殴り力1位が投げ力2位より低い場合
-            # 2, 5
-            # 4, 6
-            H -= k_list[1][1]
-            k_list.pop(1)
-            count += 1
-            # 更新
-            max_b_a, max_b = k_list[0][0], k_list[0][1]
-            max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
+    # 殴り力でも投げ力でも1位
+    # ただし殴り力1位が投げ力2位より高いとは限らない
+    if max_b_a >= k_list[1][0]:
+        # (E)パターン
+        # 殴り力1位が投げ力2位より高い場合、最後に投げるまで殴り続けた方が良い
+        # 2, 4
+        # 5, 6
+        count += 1
+        count += (H - k_list[0][1]) // k_list[0][0]
+        count = count + 1 if (H - k_list[0][1]) % k_list[0][0] != 0 else count
+        break
+    else:
+        # (C)パターン
+        # 殴り力1位が投げ力2位より低い場合、積極的に投げる
+        # 2, 5
+        # 4, 6
+        H -= k_list[1][1]
+        k_list.pop(1)
+        count += 1
+        # 更新
+        max_b_a, max_b = k_list[0][0], k_list[0][1]
+        max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
 
 ans = count
 print(ans)
