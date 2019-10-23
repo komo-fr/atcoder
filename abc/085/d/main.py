@@ -65,7 +65,7 @@ while H > 0:
         count += 1
         # 更新
         max_b_a, max_b = k_list[0][0], k_list[0][1]
-        max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
+        # max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
         continue
 
     # 殴り力でも投げ力でも1位
@@ -89,7 +89,7 @@ while H > 0:
         count += 1
         # 更新
         max_b_a, max_b = k_list[0][0], k_list[0][1]
-        max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
+        # max_a, _ = sorted(k_list, key=lambda x: (x[0], -x[1]), reverse=True)[0]
 
 ans = count
 print(ans)
