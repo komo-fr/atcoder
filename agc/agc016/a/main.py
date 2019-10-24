@@ -18,7 +18,7 @@ for char in set(s_list):
                 after_list += w_list[i]
         count += 1
         w_list = after_list
-
+    min_count = min(min_count, count)
     if count < min_count:
         min_count = count
         ans = "".join(w_list)
