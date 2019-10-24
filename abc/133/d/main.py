@@ -2,19 +2,18 @@
 
 N = int(input().split()[0])
 a_list = list(map(int, input().split()))
-start_w = a_list[0] * 2
 
-# 一番小さいものから決めていく？
-for sw in range(start_w + 1):
-    w_list = []
-    if a_list[0] < sw // 2:
-        continue
-    w_list.append(sw)
-    for i in range(1, N):
-        w_list.append((a_list[i - 1] - w_list[i - 1] // 2) * 2)
+r_list = []
+total = 0
 
-    if a_list[-1] == (w_list[0] + w_list[-1]) // 2:
-        break
+for i in range(1, N, 2):
+    total += a_list[i]
 
-ans = " ".join([str(w) for w in w_list])
+r_list.append(sum(a_list) - total * 2)
+
+for i in range(1, N):
+    r = a_list[i - 1] * 2 - r_list[i - 1]
+    r_list.append(r)
+
+ans = " ".join([str(w) for w in r_list])
 print(ans)
