@@ -12,8 +12,13 @@ for i, ch in enumerate(list(S)):
         # )(だったら
         sub_s += ch
         counter = collections.Counter(sub_s)
-        ext_n_open += max(0, counter["("] - counter[")"])
-        ext_n_close += max(0, counter[")"] - counter["("])
+        if counter["("] > counter[")"]:
+            ext_n_open += counter["("] - counter[")"]
+        elif counter["("] < counter[")"]:
+            n_close_w = counter[")"] - counter["("]
+            n_close = max(0, n_close_w - ext_n_open)
+            ext_n_open = max(0, ext_n_open - n_close_w)
+            ext_n_close += n_close
         sub_s = ""
     else:
         # )), ((, ()
