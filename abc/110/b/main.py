@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+N, M, X, Y = list(map(int, input().split()))
+x_list = list(map(int, input().split()))
+y_list = list(map(int, input().split()))
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+if max(x_list) < min(y_list) and max(x_list) > X and min(y_list) <= Y:
+    ans = "No War"
+else:
+    ans = "War"
 
 print(ans)
