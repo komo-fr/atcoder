@@ -9,29 +9,24 @@
       "id": "abc112_a",
       "label": "A",
       "title": "Programming Education",
-      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_a"
+      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc112_b",
       "label": "B",
       "title": "Time Limit Exceeded",
-      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_b",
-      "directory": {
-        "path": "b",
-        "testdir": "tests",
-        "submit": "main.py"
-      }
+      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_b"
     },
     {
       "id": "abc112_c",
       "label": "C",
       "title": "Pyramid",
-      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_c",
-      "directory": {
-        "path": "c",
-        "testdir": "tests",
-        "submit": "main.py"
-      }
+      "url": "https://atcoder.jp/contests/abc112/tasks/abc112_c"
     },
     {
       "id": "abc112_d",
