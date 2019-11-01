@@ -18,10 +18,10 @@ if (y2 <= y1 + r <= y3) and (y2 <= y1 - r <= y3):
 def is_inside_circle(x, y):
     if x1 - r <= x <= x1 + r:
         if y >= y1:
-            if y <= math.sqrt(r ** 2 - x ** 2):
+            if y <= (y1 + math.sqrt(r ** 2 - (x - x1) ** 2)):
                 return True
         else:
-            if y >= (-math.sqrt(r ** 2 - x ** 2)):
+            if y >= (y1 - math.sqrt(r ** 2 - (x - x1) ** 2)):
                 return True
     return False
 
