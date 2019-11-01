@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+H, W = list(map(int, input().split()))
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+if H == 1 and W == 1:
+    ans = 0
+elif H == 1 or W == 1:
+    ans = max(H, W) - 1
+else:
+    ans = (W - 1) * H + (H - 1) * W
 
 print(ans)
