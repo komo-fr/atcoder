@@ -1,0 +1,38 @@
+{
+  "contest": {
+    "id": "arc055",
+    "title": "AtCoder Regular Contest 055",
+    "url": "https://atcoder.jp/contests/arc055"
+  },
+  "tasks": [
+    {
+      "id": "arc055_a",
+      "label": "A",
+      "title": "数え上げ",
+      "url": "https://atcoder.jp/contests/arc055/tasks/arc055_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc055_b",
+      "label": "B",
+      "title": "せんべい",
+      "url": "https://atcoder.jp/contests/arc055/tasks/arc055_b"
+    },
+    {
+      "id": "arc055_c",
+      "label": "C",
+      "title": "ABCAC",
+      "url": "https://atcoder.jp/contests/arc055/tasks/arc055_c"
+    },
+    {
+      "id": "arc055_d",
+      "label": "D",
+      "title": "隠された等差数列",
+      "url": "https://atcoder.jp/contests/arc055/tasks/arc055_d"
+    }
+  ]
+}
