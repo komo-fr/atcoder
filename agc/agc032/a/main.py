@@ -18,8 +18,8 @@ while w_list:
 
     # 右側から処理すると順序が変わらないので、
     # 右側から抜いていく
-    for k in reversed(kouho_list):
-        ans_list.append(w_list.pop(k))
+    kouho_list = list(reversed(kouho_list))
+    ans_list.append(w_list.pop(kouho_list[0]))
 
 if is_ok:
     ans_list = [str(x) for x in reversed(ans_list)]
