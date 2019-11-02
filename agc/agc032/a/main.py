@@ -12,16 +12,17 @@ ans_list = []
 # 候補が複数ある場合が考えられる
 while w_list:
     kouho_list = [i for i, w in enumerate(w_list) if w == i + 1]
-    if kouho_list:
-        del_i = kouho_list[0]
-        ans_list.append(w_list[del_i])
-        del w_list[del_i]
-    else:
+    if not kouho_list:
         is_ok = False
         break
 
+    # 右側から処理すると順序が変わらないので、
+    # 右側から抜いていく
+    for k in reversed(kouho_list):
+        ans_list.append(w_list.pop(k))
+
 if is_ok:
-    ans_list = reversed(ans_list)
+    ans_list = [str(x) for x in reversed(ans_list)]
     ans = "\n".join(ans_list)
 else:
     ans = -1
