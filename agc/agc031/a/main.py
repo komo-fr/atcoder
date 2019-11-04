@@ -1,43 +1,15 @@
 #!/usr/bin/env python3
+import collections
 
 N = int(input().split()[0])
 S = input()
-
-start_idx, end_idx = 0, 0
-is_reversed = False
-sub_s = S[0]
+counter = collections.Counter(S)
 count = 1
 mod = 10 ** 9 + 7
+for _, v in counter.items():
+    # その文字数の数 + 1ケース（選ばないケース)
+    count = count * (v + 1) % mod
 
-
-while True:
-
-    if len(set(sub_s)) == len(sub_s):
-        count += 1
-        is_ok = True
-    else:
-        is_ok = False
-
-    # 次の更新
-    if not is_reversed:
-        if end_idx != N - 1:
-            if is_ok:
-                end_idx += 1
-            else:
-                is_reversed = True
-                start_idx += 1
-        else:
-            is_reversed = True
-            start_idx += 1
-    else:
-        if end_idx != start_idx:
-            end_idx -= 1
-        else:
-            is_reversed = False
-            start_idx += 1
-
-    if start_idx == N or end_idx == N or start_idx > end_idx:
-        break
-
-ans = count % mod
+# 空文字列も含まれるので1引く
+ans = (count - 1) % mod
 print(ans)
