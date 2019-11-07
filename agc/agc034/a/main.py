@@ -5,7 +5,7 @@ S = input()
 
 is_ok = True
 
-for i in range(A, max(C, D) - 1):
+for i in range(A - 1, max(C, D) - 2):
     if S[i] == "#" and S[i + 1] == "#":
         is_ok = False
         break
@@ -13,7 +13,7 @@ for i in range(A, max(C, D) - 1):
 if is_ok:
     if C > D:
         is_ok = False
-        for i in range(B, D - 1):
+        for i in range(B - 2, D - 1):
             if S[i] == "." and S[i + 1] == "." and S[i + 2] == ".":
                 is_ok = True
                 break
