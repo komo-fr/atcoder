@@ -32,13 +32,20 @@ else:
         # 最小公倍数が候補
         l = w_m * w_n // fractions.gcd(w_m, w_n)
         is_ok = True
-        for i in range(l):
-            s_idx = i * (l // w_n)
-            t_idx = i * (l // w_m)
+        s_idx_list = []
+        t_idx_list = []
+
+        # w_mの方が小さいのでw_mを基準にする
+        for i in range(w_n):
+            s_idx_list.append(i * (l // w_n))
+            t_idx_list.append(i * (l // w_m))
+        common_idx_list = list(set(s_idx_list) & set(t_idx_list))
+
+        for j in common_idx_list:
+            s_idx = w_n * j // l
+            t_idx = w_m * j // l
             if t_idx > w_m - 1:
                 break
-            if s_idx != t_idx:
-                continue
             if w_s[s_idx] != w_t[t_idx]:
                 is_ok = False
                 break
