@@ -9,7 +9,12 @@
       "id": "agc014_a",
       "label": "A",
       "title": "Cookie Exchanges",
-      "url": "https://atcoder.jp/contests/agc014/tasks/agc014_a"
+      "url": "https://atcoder.jp/contests/agc014/tasks/agc014_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "agc014_b",
