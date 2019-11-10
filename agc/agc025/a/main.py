@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 
 N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = str(N)
+a_list = []
+b_list = []
+total = 0
+if int(S[0]) == 1 and int(S[1:]) == 0:
+    total = 10
+else:
+    for char in S:
+        total += int(char)
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+ans = total
 
 print(ans)
