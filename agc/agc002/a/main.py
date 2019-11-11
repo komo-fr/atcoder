@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+a, b = list(map(int, input().split()))
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+if a <= 0 <= b:
+    r = "Zero"
+elif a > 0:
+    r = "Positive"
+else:
+    if (b - a + 1) % 2 == 0:
+        r = "Positive"
+    else:
+        r = "Negative"
 
+ans = r
 print(ans)
