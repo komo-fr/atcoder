@@ -3,7 +3,7 @@
 N = int(input().split()[0])
 n_list = [int(char) for char in str(N)]
 
-if N % 10 == 0:
+if n_list[0] == 1 and N % 10 == 0:
     ans = 9 * len(n_list[1:])
 else:
     total_1 = sum(n_list)
