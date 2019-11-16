@@ -31,7 +31,12 @@
       "id": "abc137_d",
       "label": "D",
       "title": "Summer Vacation",
-      "url": "https://atcoder.jp/contests/abc137/tasks/abc137_d"
+      "url": "https://atcoder.jp/contests/abc137/tasks/abc137_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc137_e",
