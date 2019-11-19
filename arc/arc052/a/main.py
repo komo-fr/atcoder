@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = input()
+n_list = []
+for char in list(S):
+    if char in [str(i) for i in range(10)]:
+        n_list.append(char)
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+ans = "".join(n_list)
 
 print(ans)
