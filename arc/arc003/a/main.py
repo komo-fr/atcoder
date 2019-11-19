@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
+import collections
 
 N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+r = input()
+c = collections.Counter(r)
+s = 0
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+for i, char in enumerate("FDCBA"):
+    s += c[char] * i
 
+ans = s / len(r)
 print(ans)
