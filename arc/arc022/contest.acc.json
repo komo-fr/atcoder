@@ -9,7 +9,12 @@
       "id": "arc022_1",
       "label": "A",
       "title": "スーパーICT高校生",
-      "url": "https://atcoder.jp/contests/arc022/tasks/arc022_1"
+      "url": "https://atcoder.jp/contests/arc022/tasks/arc022_1",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc022_2",
