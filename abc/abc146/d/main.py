@@ -74,7 +74,6 @@ while next_node_list:
     for node in next_node_list:
         color_edge(node)
         next_parent_list += node_dict[node]["children"]
-    # コピーはO(N)
     next_node_list = next_parent_list
 
 color_list_str = ""
