@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+a, b, x = list(map(int, input().split()))
+a_n = a // x
+b_n = b // x
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+ans = b_n - a_n
+ans = ans + 1 if a % x == 0 else ans
 
 print(ans)
