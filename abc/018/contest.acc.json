@@ -15,7 +15,12 @@
       "id": "abc018_2",
       "label": "B",
       "title": "文字列の反転",
-      "url": "https://atcoder.jp/contests/abc018/tasks/abc018_2"
+      "url": "https://atcoder.jp/contests/abc018/tasks/abc018_2",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc018_3",
