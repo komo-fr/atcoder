@@ -15,7 +15,12 @@
       "id": "abc019_2",
       "label": "B",
       "title": "高橋くんと文字列圧縮",
-      "url": "https://atcoder.jp/contests/abc019/tasks/abc019_2"
+      "url": "https://atcoder.jp/contests/abc019/tasks/abc019_2",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc019_3",

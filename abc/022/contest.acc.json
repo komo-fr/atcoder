@@ -15,7 +15,12 @@
       "id": "abc022_b",
       "label": "B",
       "title": "Bumble Bee",
-      "url": "https://atcoder.jp/contests/abc022/tasks/abc022_b"
+      "url": "https://atcoder.jp/contests/abc022/tasks/abc022_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc022_c",
