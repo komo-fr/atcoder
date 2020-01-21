@@ -30,10 +30,5 @@ for i in range(1, N + 1):  # 最大で10**2
             if min_weight <= W:
                 max_value = j
 
-
-# max_value = 0
-# for i, w in enumerate(dp_table[-1]):
-#     if w <= W:
-#         max_value = i
 ans = max_value
 print(ans)
