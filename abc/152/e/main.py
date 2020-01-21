@@ -10,7 +10,7 @@ mod = 10 ** 9 + 7
 t = 0
 for a in a_list:
     b = x // a
-    t += b % mod
+    t += b
 
 ans = t % mod
 print(ans)
