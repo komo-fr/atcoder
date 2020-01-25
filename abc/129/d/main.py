@@ -8,8 +8,9 @@ c_table = []
 for _ in range(H):
     s = list(input())
     s_table.append(s)
-    total_table.append([0] * W)
-    c_table.append([[0] * 4 for _ in range(W)])
+
+c_table = np.zeros((H, W, 4))
+total_table = np.zeros((H, W))
 
 for i in range(H):
     for j in range(W):
@@ -33,6 +34,8 @@ for i in range(H):
             if s_table[H - i][j] == "." and s_table[H - i - 1][j] == ".":
                 c_table[H - i - 1][j][3] = c_table[H - i][j][3] + 1
                 total_table[H - i - 1][j] += c_table[H - i - 1][j][3]
-ans = np.array(total_table).max() + 1
+
+ans = np.max(total_table) + 1
+ans = int(ans)
 
 print(ans)
