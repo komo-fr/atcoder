@@ -20,7 +20,12 @@
       "id": "nikkei2019_2_qual_b",
       "label": "B",
       "title": "Counting of Trees",
-      "url": "https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_b"
+      "url": "https://atcoder.jp/contests/nikkei2019-2-qual/tasks/nikkei2019_2_qual_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "nikkei2019_2_qual_c",
