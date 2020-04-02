@@ -9,7 +9,12 @@
       "id": "abc018_1",
       "label": "A",
       "title": "豆まき",
-      "url": "https://atcoder.jp/contests/abc018/tasks/abc018_1"
+      "url": "https://atcoder.jp/contests/abc018/tasks/abc018_1",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc018_2",

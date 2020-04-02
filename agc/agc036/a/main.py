@@ -8,7 +8,7 @@ x_3, y_3 = 1, S
 
 def get_divisor(n: int) -> list:
     d_list = []
-    for i in range(1, int(n ** (1 / 2)) + 1):
+    for i in range(int(n ** (1 / 2)), 0, -1):
         if n % i == 0:
             a = int(n / i)
             if a <= 10 ** 9 and i <= 10 ** 9:

@@ -20,7 +20,12 @@
       "id": "agc011_b",
       "label": "B",
       "title": "Colorful Creatures",
-      "url": "https://atcoder.jp/contests/agc011/tasks/agc011_b"
+      "url": "https://atcoder.jp/contests/agc011/tasks/agc011_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "agc011_c",
