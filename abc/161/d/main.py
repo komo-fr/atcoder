@@ -18,7 +18,7 @@ max_limit = 10 ** 5
 while upper_limit <= max_limit:
     # 3桁目
     w_dict = {
-        k: ww_dict[i - 1][k - 1] + ww_dict[i - 1][k] + ww_dict[i - 1][k]
+        k: ww_dict[i - 1][k - 1] + ww_dict[i - 1][k] + ww_dict[i - 1][k + 1]
         for k in range(1, 9)
     }
     w_dict[0] = ww_dict[i - 1][0] + ww_dict[i - 1][1]
@@ -42,30 +42,31 @@ ans_list = []
 # i-1桁目のMAX値
 t = limit_list[keta - 2]
 
-for i in keta_list[::-1]:
-    # i桁目の数字を決めたい
-    if i == keta_list[-1]:
-        # iが最大桁の場合の候補の数字
-        number_list = list(range(1, 10))
-    else:
-        if ans_list[-1] == 9:
-            max_n = 9
+if keta == 1:
+    ans_list = [K]
+else:
+    for i in keta_list[::-1]:
+        # i桁目の数字を決めたい
+        if i == keta_list[-1]:
+            # iが最大桁の場合の候補の数字
+            number_list = list(range(1, 10))
         else:
-            max_n = ans_list[-1] + 1
-
-        min_n = 0 if ans_list[-1] == 0 else ans_list[-1] - 1
-
-        number_list = list(range(min_n, max_n + 1))
-    for n in number_list:
-        if i == 1:
-            w = t + 1
-        else:
-            w = t + ww_dict[i][n]
-        if w >= K:
-            ans_list.append(n)
-            break
-        # 超えていなかったら更新
-        t = w
+            if ans_list[-1] == 9:
+                max_n = 9
+            else:
+                max_n = ans_list[-1] + 1
+            min_n = 0 if ans_list[-1] == 0 else ans_list[-1] - 1
+            number_list = list(range(min_n, max_n + 1))
+        for n in number_list:
+            if i == 1:
+                w = t + 1
+            else:
+                w = t + ww_dict[i][n]
+            if w >= K:
+                ans_list.append(n)
+                break
+            # 超えていなかったら更新
+            t = w
 
 ans = "".join([str(i) for i in ans_list])
 print(ans)
