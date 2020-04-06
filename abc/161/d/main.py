@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 
 K = int(input())
+
+# Xがi+1桁である場合のルンルン数の最大値のリスト
 limit_list = []
+
+# Xが1桁の場合のルンルン数の最大値
 upper_limit = 9
 limit_list.append(upper_limit)
-t_dict = {i: 1 for i in range(10)}
-# 2桁目の場合
-s_dict = {k: 3 for k in range(1, 9)}
-s_dict[9] = 2
-s_dict[0] = 2
-upper_limit = upper_limit + sum(s_dict.values()) - s_dict[0]
-limit_list.append(upper_limit)
-ww_dict = {1: t_dict, 2: s_dict}  # 2桁目
 
-i = 3
-max_limit = 10 ** 5
-while upper_limit <= max_limit:
-    # 3桁目
+# 1桁目がiである場合のルンルン数の個数
+w_dict = {i: 1 for i in range(10)}
+
+max_K = 10 ** 5
+i = 2
+
+# i桁目の数字がkである場合のルンルン数の個数をあらかじめカウントしておく
+# ww_dictのキーは桁数
+ww_dict = {1: w_dict}
+
+while upper_limit <= max_K:
     w_dict = {
         k: ww_dict[i - 1][k - 1] + ww_dict[i - 1][k] + ww_dict[i - 1][k + 1]
         for k in range(1, 9)
@@ -28,45 +31,43 @@ while upper_limit <= max_limit:
     limit_list.append(upper_limit)
     i += 1
 
-# K = 208644
-
+# 各桁におけるルンルン数の最大値から、Kの桁数を求める
 for i, l in enumerate(limit_list):
     if l >= K:
-        keta = i + 1
+        digit_n = i + 1
         break
 
-keta_list = list(range(1, keta + 1))
+# Xの各桁における数字のリスト
+x_list = []
 
-ans_list = []
+# 「Kの最大桁-1」の桁数におけるルンルン数の最大値
+lunlun_k = limit_list[(digit_n - 1) - 1]
 
-# i-1桁目のMAX値
-t = limit_list[keta - 2]
-
-if keta == 1:
-    ans_list = [K]
+if digit_n == 1:
+    # 1桁の場合は確定でX=Kになる
+    x_list = [K]
 else:
-    for i in keta_list[::-1]:
-        # i桁目の数字を決めたい
-        if i == keta_list[-1]:
-            # iが最大桁の場合の候補の数字
+    # i桁目の数字を、大きい桁から決めていく
+    for i, digit in enumerate(reversed(range(1, digit_n + 1))):
+        if i == 0:
+            # iが最大桁である場合の数字の候補（leading zero無なので0は含まない）
             number_list = list(range(1, 10))
         else:
-            if ans_list[-1] == 9:
-                max_n = 9
-            else:
-                max_n = ans_list[-1] + 1
-            min_n = 0 if ans_list[-1] == 0 else ans_list[-1] - 1
+            # iが最大桁ではない場合、直前に決めた桁によって候補が変わる
+            max_n = 9 if x_list[-1] == 9 else x_list[-1] + 1
+            min_n = 0 if x_list[-1] == 0 else x_list[-1] - 1
             number_list = list(range(min_n, max_n + 1))
-        for n in number_list:
-            if i == 1:
-                w = t + 1
-            else:
-                w = t + ww_dict[i][n]
-            if w >= K:
-                ans_list.append(n)
-                break
-            # 超えていなかったら更新
-            t = w
 
-ans = "".join([str(i) for i in ans_list])
+        for n in number_list:
+            tmp_lunlun_k = lunlun_k + ww_dict[digit][n]
+
+            if tmp_lunlun_k >= K:
+                # i桁目の数字はnで確定
+                x_list.append(n)
+                break
+
+            # i桁目は少なくともn以上の数なので続行
+            lunlun_k = tmp_lunlun_k
+
+ans = "".join([str(i) for i in x_list])
 print(ans)
