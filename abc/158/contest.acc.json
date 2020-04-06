@@ -26,7 +26,11 @@
       "id": "abc158_c",
       "label": "C",
       "title": "Tax Increase",
-      "url": "https://atcoder.jp/contests/abc158/tasks/abc158_c"
+      "url": "https://atcoder.jp/contests/abc158/tasks/abc158_c",
+      "directory": {
+        "path": "c",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc158_d",
