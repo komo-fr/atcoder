@@ -29,6 +29,7 @@
       "url": "https://atcoder.jp/contests/abc158/tasks/abc158_c",
       "directory": {
         "path": "c",
+        "testdir": "tests",
         "submit": "main.py"
       }
     },
