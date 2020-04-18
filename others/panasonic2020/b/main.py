@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
-
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
-
+N, M = list(map(int, input().split()))
+if N == 1 and M != 1:
+    ans = 1
+elif N != 1 and M == 1:
+    ans = 1
+else:
+    a = ((N + 1) // 2) * ((M + 1) // 2)
+    b = (N // 2) * (M // 2)
+    ans = a + b
 print(ans)
