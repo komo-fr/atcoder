@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
 N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+d_list = []
 
 for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+    d = int(input().split()[0])
+    d_list.append(d)
 
-print(ans)
+max_d = sum(d_list)
+min_d = max(max(d_list) - (max_d - max(d_list)), 0)
+
+print(max_d)
+print(min_d)
