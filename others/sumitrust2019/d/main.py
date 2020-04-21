@@ -1,18 +1,40 @@
 #!/usr/bin/env python3
-import itertools
+import collections
+import copy
 
 N = int(input().split()[0])
 S = input()
 
-index_list = [i for i in range(N)]
-p_list = []
+counter = collections.Counter(S)
+total = 0
+done_list = []
 
-for pattern in itertools.combinations(index_list, 3):
-    a, b, c = list(sorted(list(pattern)))
+for i, ch in enumerate(S[::-1]):  # 3 * 10 ** 4
+    if ch in done_list:
+        counter[ch] = counter[ch] - 1
+        if counter[ch] < 1:
+            del counter[ch]
+        continue
+    sub_done_list = []
+    counter[ch] = counter[ch] - 1
+    if counter[ch] < 1:
+        del counter[ch]
+    sub_counter = copy.copy(counter)
 
-    s = S[a] + S[b] + S[c]
-    p_list.append(s)
+    for ch_2 in S[N - (i + 1) - 1 :: -1]:  # 3 * 10 ** 4
+        if ch_2 in sub_done_list:
+            sub_counter[ch_2] = sub_counter[ch_2] - 1
+            if sub_counter[ch_2] < 1:
+                del sub_counter[ch_2]
+            continue
+        sub_done_list.append(ch_2)
+        sub_counter[ch_2] = sub_counter[ch_2] - 1
+        if sub_counter[ch_2] < 1:
+            del sub_counter[ch_2]
+        total += len(sub_counter.keys())
 
-ans = len(set(p_list))
+    done_list.append(ch)
+
+ans = total
 
 print(ans)
