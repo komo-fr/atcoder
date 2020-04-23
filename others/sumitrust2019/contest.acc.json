@@ -9,7 +9,12 @@
       "id": "sumitb2019_a",
       "label": "A",
       "title": "November 30",
-      "url": "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_a"
+      "url": "https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "sumitb2019_b",
