@@ -1,11 +1,35 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = input()
+N = len(S)
+count = 0
+is_ok = True
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+right_index = 0
+left_index = N - 1
+
+while right_index < left_index:
+
+    if right_index == left_index:
+        break
+
+    if S[right_index] == S[left_index]:
+        right_index += 1
+        left_index -= 1
+        continue
+    if S[right_index] == "x":
+        count += 1
+        right_index += 1
+        continue
+
+    if S[left_index] == "x":
+        count += 1
+        left_index -= 1
+        continue
+
+    count = -1
+    break
+
+ans = count
 
 print(ans)
