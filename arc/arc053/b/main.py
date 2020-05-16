@@ -33,11 +33,17 @@ else:
 
         # 奇数長の差をなるべく埋めていく
         if d > 0:
-            if even_len >= d:
-                even_len -= d
+            count = i + 1  # 穴埋めの必要がある部分文字列の個数
+            even_set_n = even_len // 2
+            plus_set_n = even_set_n // count  # 最低限補充できるセット数
+            plus_n = plus_set_n * 2  # 1部分文字列ごとに最低限補充される文字数
+
+            if plus_n >= d:
+                # 十分に補充できる
+                even_len -= d * count
                 min_len = next_len
             else:
-                min_len = x + even_len
+                min_len = x + plus_n
                 even_len = 0
     if even_len:
         # まだ残っている場合、なるべく均等になるように割り振る
