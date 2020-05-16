@@ -1,0 +1,45 @@
+{
+  "contest": {
+    "id": "ddcc2020-qual",
+    "title": "DISCO Presents Discovery Channel Code Contest 2020 Qual",
+    "url": "https://atcoder.jp/contests/ddcc2020-qual"
+  },
+  "tasks": [
+    {
+      "id": "ddcc2020_qual_a",
+      "label": "A",
+      "title": "DDCC Finals",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_a"
+    },
+    {
+      "id": "ddcc2020_qual_b",
+      "label": "B",
+      "title": "Iron Bar Cutting",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_b"
+    },
+    {
+      "id": "ddcc2020_qual_c",
+      "label": "C",
+      "title": "Strawberry Cakes",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_c"
+    },
+    {
+      "id": "ddcc2020_qual_d",
+      "label": "D",
+      "title": "Digit Sum Replace",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_d"
+    },
+    {
+      "id": "ddcc2020_qual_e",
+      "label": "E",
+      "title": "Majority of Balls",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_e"
+    },
+    {
+      "id": "ddcc2020_qual_f",
+      "label": "F",
+      "title": "DISCOSMOS",
+      "url": "https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_f"
+    }
+  ]
+}
