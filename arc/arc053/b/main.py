@@ -22,32 +22,14 @@ odd_len_list = sorted(odd_len_list)
 if odd_n < 2:
     min_len = len(S)
 else:
-    even_len = even_len_sum
+    stock_n = even_len_sum
     min_len = odd_len_list[0]
 
-    for i, x in enumerate(odd_len_list[:-1]):
-        if even_len < 1:
-            break
-        next_len = odd_len_list[i + 1]
-        d = next_len - x
+    # 一番短い奇数長に合わせて、他は全部ストックに回す
+    stock_n += sum([x - min_len for x in odd_len_list])
 
-        # 奇数長の差をなるべく埋めていく
-        if d > 0:
-            count = i + 1  # 穴埋めの必要がある部分文字列の個数
-            even_set_n = even_len // 2
-            plus_set_n = even_set_n // count  # 最低限補充できるセット数
-            plus_n = plus_set_n * 2  # 1部分文字列ごとに最低限補充される文字数
-
-            if plus_n >= d:
-                # 十分に補充できる
-                even_len -= d * count
-                min_len = next_len
-            else:
-                min_len = x + plus_n
-                even_len = 0
-    if even_len:
-        # まだ残っている場合、なるべく均等になるように割り振る
-        min_len = min_len + ((even_len // 2) // odd_n) * 2
+    if stock_n:
+        min_len = min_len + ((stock_n // 2) // odd_n) * 2
 
 ans = min_len
 print(ans)
