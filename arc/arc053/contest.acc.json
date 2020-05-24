@@ -20,7 +20,12 @@
       "id": "arc053_b",
       "label": "B",
       "title": "回文分割",
-      "url": "https://atcoder.jp/contests/arc053/tasks/arc053_b"
+      "url": "https://atcoder.jp/contests/arc053/tasks/arc053_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc053_c",
