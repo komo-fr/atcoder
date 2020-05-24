@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
+import collections
+import math
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+N, M = list(map(int, input().split()))
+name = input()
+kit = input()
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
-
+name_counter = collections.Counter(name)
+kit_counter = collections.Counter(kit)
+count = 0
+for k, v in name_counter.items():
+    if kit_counter[k] == 0:
+        count = -1
+        break
+    count = max(count, math.ceil(v / kit_counter[k]))
+ans = count
 print(ans)
