@@ -8,27 +8,26 @@ for _ in range(Q):
     s_list.append(s)
 
 # f_table = [[0] * N for _ in range(N)]
-f_map = {i + 1: [] for i in range(N)}  # keyがフォローしているユーザ
-ff_map = {i + 1: [] for i in range(N)}  # keyをフォローしているユーザ
-for s in s_list:
+f_map = {i + 1: set() for i in range(N)}  # keyがフォローしているユーザ
+ff_map = {i + 1: set() for i in range(N)}  # keyをフォローしているユーザ
+for s in s_list:  # 500
     if s[0] == 1:
         source, target = s[1], s[2]
-        f_map[source] += [target]
-        ff_map[target] += [source]
+        f_map[source] = f_map[source] | {target}
+        ff_map[target] = ff_map[target] | {source}
     elif s[0] == 2:
         source = s[1]
         for target in ff_map[source]:
-            f_map[source] += [target]
-            ff_map[target] += [source]
+            f_map[source] = f_map[source] | {target}
+            ff_map[target] = ff_map[target] | {source}
     elif s[0] == 3:
         source = s[1]
-        additional = []
+        additional = set()
         for f in f_map[source]:
-            additional += f_map[f]
-        additional = list(set(additional))
-        f_map[source] += additional
+            additional = additional | f_map[f]
+        f_map[source] = f_map[source] | additional
         for target in additional:
-            ff_map[target] += [source]
+            ff_map[target] = ff_map[target] | {source}
 
 f_table = [["N"] * N for _ in range(N)]
 
