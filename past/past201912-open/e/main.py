@@ -10,6 +10,7 @@ for _ in range(Q):
 # f_table = [[0] * N for _ in range(N)]
 f_map = {i + 1: set() for i in range(N)}  # keyがフォローしているユーザ
 ff_map = {i + 1: set() for i in range(N)}  # keyをフォローしているユーザ
+
 for s in s_list:  # 500
     if s[0] == 1:
         source, target = s[1], s[2]
@@ -25,7 +26,7 @@ for s in s_list:  # 500
         additional = set()
         for f in f_map[source]:
             additional = additional | f_map[f]
-        f_map[source] = f_map[source] | additional
+        f_map[source] = f_map[source] | additional - {source}
         for target in additional:
             ff_map[target] = ff_map[target] | {source}
 
@@ -33,6 +34,8 @@ f_table = [["N"] * N for _ in range(N)]
 
 for i in range(N):  # フォロー元
     for j in range(N):
+        if i == j:
+            continue
         if (j + 1) in f_map[i + 1]:
             f_table[i][j] = "Y"
 
