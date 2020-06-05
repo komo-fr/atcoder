@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 
 N = int(input().split()[0])
 c_list = list(map(int, input().split()))
@@ -36,7 +37,7 @@ for s in s_list:
         count = int(ope[1])
         # print("odd_min: {}".format(odd_min))
         if count <= odd_min:
-            buy_count += count * (N // 2)
+            buy_count += count * math.ceil(N / 2)
             odd_min -= count
             all_min = min(all_min, odd_min)
             odd_diff += count
