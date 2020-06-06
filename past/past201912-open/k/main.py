@@ -3,17 +3,22 @@ from collections import defaultdict
 
 N = int(input().split()[0])
 boss_dict = defaultdict(lambda: defaultdict(lambda: False))
-
+p_dict = {}
 for i in range(N):
     p = int(input())
-    boss_dict[p][i + 1] = True
+    p_dict[i + 1] = p
 
 Q = int(input().split()[0])
 
 for _ in range(Q):
     a, b = list(map(int, input().split()))
-    # ab_list.append((a, b))
-    text = "Yes" if boss_dict[b][a] else "No"
-    print(text)
+    me = a
+    is_boss = False
+    while me != -1:
+        me = p_dict[me]
+        if me == b:
+            is_boss = True
+            break
 
-print(boss_dict)
+    text = "Yes" if is_boss else "No"
+    print(text)
