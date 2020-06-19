@@ -26,7 +26,12 @@
       "id": "panasonic2020_c",
       "label": "C",
       "title": "Sqrt Inequality",
-      "url": "https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_c"
+      "url": "https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "panasonic2020_d",
