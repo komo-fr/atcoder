@@ -9,6 +9,7 @@ for _ in range(M):
 sc_set = set(sc_list)
 start = 10 ** (N - 1)
 end = 10 ** N
+start = 0 if N == 1 else start
 
 is_ok = True
 
@@ -17,16 +18,19 @@ if len(sc_set) > N:
 
 answer = -1
 if is_ok:
-    for i in range(start, end):
-        is_sub_ok = True
-        str_number = str(i)
-        for sc in sc_set:
-            s, c = sc
-            if str_number[s - 1] != str(c):
-                is_sub_ok = False
-                continue
-        if is_sub_ok:
-            answer = i
-            break
+    if M == 0:
+        answer = start
+    else:
+        for i in range(start, end):
+            is_sub_ok = True
+            str_number = str(i)
+            for sc in sc_set:
+                s, c = sc
+                if str_number[s - 1] != str(c):
+                    is_sub_ok = False
+                    continue
+            if is_sub_ok:
+                answer = i
+                break
 ans = answer
 print(ans)
