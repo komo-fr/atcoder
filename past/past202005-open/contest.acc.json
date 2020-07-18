@@ -31,7 +31,12 @@
       "id": "past202005_c",
       "label": "C",
       "title": "Geometric Progression",
-      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_c"
+      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202005_d",
