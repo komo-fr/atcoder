@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
+import math
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+N, X, T = list(map(int, input().split()))
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+ans = math.ceil(N / X) * T
 
 print(ans)
