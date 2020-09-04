@@ -31,7 +31,12 @@
       "id": "abc174_c",
       "label": "C",
       "title": "Repsept",
-      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_c"
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc174_d",
