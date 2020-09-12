@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
-
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+A, B = list(input().split())
+a = int(A)
+b = int(float(B) * 100)
+ans = (a * b) // 100
 
 print(ans)
