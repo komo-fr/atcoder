@@ -2,7 +2,8 @@
 
 A, B = list(input().split())
 a = int(A)
-b = int(float(B) * 100)
+b = int(B.replace(".", ""))
+
 ans = (a * b) // 100
 
 print(ans)
