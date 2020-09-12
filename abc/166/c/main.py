@@ -3,7 +3,7 @@
 N, M = list(map(int, input().split()))
 h_list = list(map(int, input().split()))
 h_dict = {i + 1: h for i, h in enumerate(h_list)}
-h_set = set(h_list)
+h_set = set(h_dict.keys())
 no_list = []
 
 for _ in range(M):
