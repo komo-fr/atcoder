@@ -31,7 +31,12 @@
       "id": "abc173_c",
       "label": "C",
       "title": "H and V",
-      "url": "https://atcoder.jp/contests/abc173/tasks/abc173_c"
+      "url": "https://atcoder.jp/contests/abc173/tasks/abc173_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc173_d",
