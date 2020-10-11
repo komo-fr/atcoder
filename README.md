@@ -10,3 +10,12 @@ This repository is for my code submitted to AtCoder, mostly written in Pythonüê
 - memo
     - [ABC-C](https://scrapbox.io/komofr/ABC-C)
     - [ABC-D](https://scrapbox.io/komofr/ABC-D)
+
+# Environment
+
+```
+$ python3.8 -m venv venv
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+$ npm install -g atcoder-cli
+```
