@@ -42,7 +42,12 @@
       "id": "past202005_d",
       "label": "D",
       "title": "Digital Display",
-      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_d"
+      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202005_e",
