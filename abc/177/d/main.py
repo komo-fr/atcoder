@@ -9,9 +9,14 @@ class UnionFind:
         self.parent = list(range(n))
 
     def find(self, i):
-        while self.parent[i] != i:  # ここがボトルネックになる？
-            i = self.parent[i]
-        return i
+        if self.parent[i] == i:
+            # 自分自身だったらそのまま返す
+            return i
+        else:
+            # 自分の祖先を、自分の祖先の祖先で更新する
+            # こうすることで、途中を飛ばすことができる
+            self.parent[i] = self.find(self.parent[i])
+            return self.parent[i]
 
     def union(self, i, j):
         i = self.find(i)
