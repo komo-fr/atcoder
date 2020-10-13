@@ -42,7 +42,12 @@
       "id": "abc174_d",
       "label": "D",
       "title": "Alter Altar",
-      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_d"
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc174_e",
