@@ -42,7 +42,12 @@
       "id": "abc171_d",
       "label": "D",
       "title": "Replacing",
-      "url": "https://atcoder.jp/contests/abc171/tasks/abc171_d"
+      "url": "https://atcoder.jp/contests/abc171/tasks/abc171_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc171_e",
