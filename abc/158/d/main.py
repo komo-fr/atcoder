@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+import collections
 
 S = input()
 Q = int(input().split()[0])
-s = S
+s = collections.deque(list(S))
 flag = True
 
 for _ in range(Q):
@@ -12,11 +13,20 @@ for _ in range(Q):
     else:
         _, f, c = q
         if flag:
-            s = c + s if f == "1" else s + c
+            if f == "1":
+                s.appendleft(c)
+            else:
+                s.append(c)
         else:
-            s = s + c if f == "1" else c + s
+            if f == "1":
+                s.append(c)
+            else:
+                s.appendleft(c)
+
 if not flag:
-    s = s[::-1]
+    s = "".join(list(s)[::-1])
+else:
+    s = "".join(s)
 
 ans = s
 print(ans)
