@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+a, b = list(map(int, input().split()))
+total = 0
+x = None
+for i in range(1, 999):
+    left_h = total + i
+    right_h = total + 2 * i + 1
+    if (left_h - a) == (right_h - b):
+        x = left_h - a
+        break
+    total += i
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
-
-ans =
+ans = x
 print(ans)
