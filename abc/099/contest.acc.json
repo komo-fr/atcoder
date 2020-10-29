@@ -15,7 +15,12 @@
       "id": "abc099_b",
       "label": "B",
       "title": "Stone Monument",
-      "url": "https://atcoder.jp/contests/abc099/tasks/abc099_b"
+      "url": "https://atcoder.jp/contests/abc099/tasks/abc099_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc099_c",
