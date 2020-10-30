@@ -15,7 +15,12 @@
       "id": "abc094_b",
       "label": "B",
       "title": "Toll Gates",
-      "url": "https://atcoder.jp/contests/abc094/tasks/abc094_b"
+      "url": "https://atcoder.jp/contests/abc094/tasks/abc094_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc095_a",
