@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 
 N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+D, X = list(map(int, input().split()))
+a_list = []
 
 for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+    a = int(input().split()[0])
+    a_list.append(a)
 
-ans =
+count = 0
+for a in a_list:
+    i = 0
+    while a * i + 1 <= D:
+        count += 1
+        i += 1
+ans = count + X
 print(ans)
