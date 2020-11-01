@@ -42,7 +42,12 @@
       "id": "past202004_d",
       "label": "D",
       "title": "String Match",
-      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_d"
+      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202004_e",
