@@ -20,13 +20,23 @@
       "id": "past202004_b",
       "label": "B",
       "title": "Plurality Voting",
-      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_b"
+      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202004_c",
       "label": "C",
       "title": "Landslide",
-      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_c"
+      "url": "https://atcoder.jp/contests/past202004-open/tasks/past202004_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202004_d",
