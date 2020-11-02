@@ -4,21 +4,27 @@ N = int(input().split()[0])
 s_table = []
 
 for _ in range(N):
-    s = list(input())
+    s = set(list(input()))
     s_table.append(s)
 
-# print(s_table)
-s_table = [list(x) for x in zip(*s_table)]
-# print(s_table)
-found_flag = False
-for s_list in s_table:
-    r_s_list = list(reversed(s_list))
-    # print(s_list)
-    # print(r_s_list)
-    if s_list == r_s_list:
-        print("".join(s_list))
-        found_flag = True
+text = ""
+found_flag = True
+for i in range(N // 2):
+    left = s_table[i]
+    right = s_table[-(i + 1)]
+
+    common = left & right
+    if common:
+        text += list(common)[0]
+    else:
+        found_flag = False
         break
 
-if not found_flag:
+if found_flag:
+    if N % 2 == 1:
+        text = text + s_table[N // 2][0] + "".join(list(reversed(text)))
+    else:
+        text += "".join(list(reversed(text)))
+    print(text)
+else:
     print(-1)
