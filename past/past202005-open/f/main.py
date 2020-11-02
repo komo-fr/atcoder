@@ -22,7 +22,7 @@ for i in range(N // 2):
 
 if found_flag:
     if N % 2 == 1:
-        text = text + s_table[N // 2][0] + "".join(list(reversed(text)))
+        text = text + list(s_table[N // 2])[0] + "".join(list(reversed(text)))
     else:
         text += "".join(list(reversed(text)))
     print(text)
