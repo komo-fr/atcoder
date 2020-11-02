@@ -64,7 +64,12 @@
       "id": "past202005_f",
       "label": "F",
       "title": "Palindromic Matrix",
-      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_f"
+      "url": "https://atcoder.jp/contests/past202005-open/tasks/past202005_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202005_g",
