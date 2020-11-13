@@ -31,7 +31,12 @@
       "id": "abc172_c",
       "label": "C",
       "title": "Tsundoku",
-      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_c"
+      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc172_d",
