@@ -37,7 +37,12 @@
       "id": "abc178_d",
       "label": "D",
       "title": "Redistribution",
-      "url": "https://atcoder.jp/contests/abc178/tasks/abc178_d"
+      "url": "https://atcoder.jp/contests/abc178/tasks/abc178_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc178_e",
