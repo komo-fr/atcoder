@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+A, B = list(map(int, input().split()))
+pn_list = []
+for i in range(10000, 999999):
+    S = str(i)
+    T = S[::-1]
+    if S == T:
+        pn_list.append(int(S))
+c = 0
+for i in pn_list:
+    if A <= i <= B:
+        c += 1
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
 
-ans =
+ans = c
 print(ans)
