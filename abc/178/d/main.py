@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = int(input().split()[0])
+count = 0
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+if S in [1, 2]:
+    ans = 0
+elif S == 3:
+    ans = 1
+else:
+    t_list = []
+    for x in range(3, S + 1):
+        for y in range(x, S + 1):
+            z = S - (x + y)
+            if z < 3:
+                continue
+            count += 1
+            t_list.append(tuple(sorted(x, y, z)))
+    ans = len(set(t_list))
 
-ans =
 print(ans)
