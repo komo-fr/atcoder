@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
+import itertools
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = input()
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
+patterns = itertools.product(["A", ""], repeat=4)
+target_list = []
+for p in patterns:
+    target_list.append(f"{p[0]}KIH{p[1]}B{p[2]}R{p[3]}")
 
-ans =
+ans = "YES" if S in target_list else "NO"
 print(ans)
