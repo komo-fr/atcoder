@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
+from collections import Counter
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+S = input()
+N = len(S)
+counter = Counter(S)
+c_counter = Counter(counter.values())
+n = N // 3
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
-
-ans =
+if N == 1:
+    ans = "YES"
+elif N == 2:
+    ans = "YES" if len(counter) == 2 else "NO"
+else:
+    if N % 3 == 0:
+        ans = "YES" if c_counter[n] == 3 else "NO"
+    elif N % 3 == 1:
+        ans = "YES" if c_counter[n] == 2 and c_counter[n + 1] == 1 else "NO"
+    else:
+        ans = "YES" if c_counter[n + 1] == 2 and c_counter[n] == 1 else "NO"
 print(ans)
