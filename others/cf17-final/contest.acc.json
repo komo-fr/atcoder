@@ -20,7 +20,12 @@
       "id": "cf17_final_b",
       "label": "B",
       "title": "Palindrome-phobia",
-      "url": "https://atcoder.jp/contests/cf17-final/tasks/cf17_final_b"
+      "url": "https://atcoder.jp/contests/cf17-final/tasks/cf17_final_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "cf17_final_c",
