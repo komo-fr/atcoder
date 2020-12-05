@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-a_list = list(map(int, input().split()))
-x_list = []
+N, M, K = list(map(int, input().split()))
+is_ok = False
+for h in range(N+1):
+    for w in range(M+1):
+        if w *h + (M-w) *(N-h) == K:
+            is_ok = True
+            break
 
-for _ in range(N):
-    x = list(map(int, input().split()))
-    x_list.append(x)
-
-ans =
+ans = "Yes" if is_ok else "No"
 print(ans)
