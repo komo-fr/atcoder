@@ -9,6 +9,7 @@ for _ in range(N):
     ng_list.append(t)
 after_list = []
 for s in s_list:
+    is_ok = True
     for t in ng_list:
         is_ok = False
         if len(s) != len(t):
