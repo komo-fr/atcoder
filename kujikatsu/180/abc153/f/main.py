@@ -38,25 +38,33 @@ damage_dict = defaultdict(lambda: 0)
 
 pre_utikesi_damage = 0
 x = x_deque.popleft()
-pre_x = -1
 uchikeshi_damages = deque([])
-while len(x_deque) + 1 > 0:
+x = -1
+while x_deque:
+    # 中身が残っていたら次の処理
+    next_monster_x = x_deque.popleft()
+    pre_x = x
+    x = next_monster_x
+
     # 今の場所にいるモンスターを倒すのに何回攻撃が必要か
     # print(f"now_damage=pre({damage_dict[pre_x]}) + 打ち消し({damage_dict[x]})")
     uchikeshi_damage = 0
-    uchikeshi_c = 0
+    # uchikeshi_c = 0
+    # print(f"{uchikeshi_damages=}")
     while uchikeshi_damages:
-        past_damage = uchikeshi_damages[0]
+        past_damage = uchikeshi_damages.popleft()
         # print(f"{uchikeshi_c=}, {past_damage=}")
         if x >= past_damage["x"]:
-            uchikeshi_damage += uchikeshi_damages.popleft()["damage"]
+            uchikeshi_damage += past_damage["damage"]
         else:
-            # uchikeshi_damages.appendleft(past_damage)
+            # まだ効果の範囲内だったら戻す
+            uchikeshi_damages.appendleft(past_damage)
             break
-    # print(f"pre_damage={damage_dict[pre_x]}, {uchikeshi_damage=}")
+    print(f"{x=}, pre_damage={damage_dict[pre_x]}, {uchikeshi_damage=}")
     damage_dict[x] = damage_dict[pre_x] - uchikeshi_damage
     now_hp = x2h_dict[x] - damage_dict[x]
-    # print(f"{x=}, {now_hp=}")
+    print(f"{x=}, {now_hp=}")
+    print(f"len(x_deque)={len(x_deque)}")
     if now_hp <= 0:
         if not x_deque:
             break
@@ -68,11 +76,12 @@ while len(x_deque) + 1 > 0:
     count += c
     damage = c * A
     damage_dict[x] += damage
-    uchikeshi_damages.append(dict(x=x + 2 * D + 1, damage=damage))
-    if x_deque:
-        next_monster_x = x_deque.popleft()
-        pre_x = x
-        x = next_monster_x
+    uchikeshi_damages.append(dict(x=x + 1 + 2 * D, damage=damage))
+    # if x_deque:
+    #     # 中身が残っていたら次の処理
+    #     next_monster_x = x_deque.popleft()
+    #     pre_x = x
+    #     x = next_monster_x
 
 ans = count
 print(ans)

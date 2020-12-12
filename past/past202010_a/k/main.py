@@ -24,24 +24,26 @@ count_char = 0
 for b in b_list:
     a_list = a_dict[b]
     # print(a_list)
+
     for j, a in enumerate(a_list):
         # print("hoge")
         if count_char == 0:
             before_0 = a
             count_char += 1
             continue
-        if count_char == 1:
-            before_1 = a
-            count_char += 1
-            continue
+        # if count_char == 1:
+        #     before_1 = a
+        #     count_char += 1
+        #     continue
 
         # print(f"{before_0=}, {before_1=}, {a=}")
 
-        if before_0 <= before_1 and before_1 >= a:
+        if before_0 <= a:
             count += 1
 
-        before_0 = before_1
-        before_1 = a
+        # before_0 = before_1
+        # before_1 = a
+        before_0 = a
 
     count_i += 1
 

@@ -20,7 +20,11 @@
       "id": "arc006_2",
       "label": "B",
       "title": "あみだくじ",
-      "url": "https://atcoder.jp/contests/arc006/tasks/arc006_2"
+      "url": "https://atcoder.jp/contests/arc006/tasks/arc006_2",
+      "directory": {
+        "path": "b",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc006_3",
