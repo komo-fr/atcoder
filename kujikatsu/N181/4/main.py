@@ -7,7 +7,7 @@ Person = namedtuple("Person", ["at", "deadline"])
 
 for _ in range(N):
     t = int(input().split()[0])
-    t_list.append(Person(t, t + C))
+    t_list.append(Person(t, t + K))
 person_deque = deque(sorted(t_list))
 
 bus_count = 0

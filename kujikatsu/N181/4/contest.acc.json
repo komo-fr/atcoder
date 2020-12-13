@@ -11,7 +11,7 @@
             "title": "Airport Bus",
             "url": "https://atcoder.jp/contests/agc011/tasks/agc011_a",
             "directory": {
-                "path": "./",
+                "path": ".",
                 "testdir": "tests",
                 "submit": "main.py"
             }
