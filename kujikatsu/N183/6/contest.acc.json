@@ -1,0 +1,44 @@
+{
+    "contest": {
+        "id": "dwacon5th-prelims",
+        "title": "Dwango Programming Contest V",
+        "url": "https://atcoder.jp/contests/dwacon5th-prelims"
+    },
+    "tasks": [
+        {
+            "id": "dwacon5th_prelims_a",
+            "label": "A",
+            "title": "Thumbnail",
+            "url": "https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_a"
+        },
+        {
+            "id": "dwacon5th_prelims_b",
+            "label": "B",
+            "title": "Sum AND Subarrays",
+            "url": "https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_b"
+        },
+        {
+            "id": "dwacon5th_prelims_c",
+            "label": "C",
+            "title": "k-DMC",
+            "url": "https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_c",
+            "directory": {
+                "path": "./",
+                "testdir": "tests",
+                "submit": "main.py"
+            }
+        },
+        {
+            "id": "dwacon5th_prelims_d",
+            "label": "D",
+            "title": "Square Rotation",
+            "url": "https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_d"
+        },
+        {
+            "id": "dwacon5th_prelims_e",
+            "label": "E",
+            "title": "Cyclic GCDs",
+            "url": "https://atcoder.jp/contests/dwacon5th-prelims/tasks/dwacon5th_prelims_e"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "contest": {
+        "id": "arc007",
+        "title": "AtCoder Regular Contest 007",
+        "url": "https://atcoder.jp/contests/arc007"
+    },
+    "tasks": [
+        {
+            "id": "arc007_1",
+            "label": "A",
+            "title": "\u5e30\u3063\u3066\u304d\u305f\u5668\u7269\u640d\u58ca\uff01\u9ad8\u6a4b\u541b",
+            "url": "https://atcoder.jp/contests/arc007/tasks/arc007_1"
+        },
+        {
+            "id": "arc007_2",
+            "label": "B",
+            "title": "\u8ff7\u5b50\u306eCD\u30b1\u30fc\u30b9",
+            "url": "https://atcoder.jp/contests/arc007/tasks/arc007_2"
+        },
+        {
+            "id": "arc007_3",
+            "label": "C",
+            "title": "\u7bc0\u7d04\u751f\u6d3b",
+            "url": "https://atcoder.jp/contests/arc007/tasks/arc007_3",
+            "directory": {
+                "path": "./",
+                "testdir": "tests",
+                "submit": "main.py"
+            }
+        },
+        {
+            "id": "arc007_4",
+            "label": "D",
+            "title": "\u7834\u308c\u305f\u5bbf\u984c",
+            "url": "https://atcoder.jp/contests/arc007/tasks/arc007_4"
+        }
+    ]
+}

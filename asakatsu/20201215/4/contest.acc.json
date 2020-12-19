@@ -1,0 +1,38 @@
+{
+    "contest": {
+        "id": "arc042",
+        "title": "AtCoder Regular Contest 042",
+        "url": "https://atcoder.jp/contests/arc042"
+    },
+    "tasks": [
+        {
+            "id": "arc042_a",
+            "label": "A",
+            "title": "\u63b2\u793a\u677f",
+            "url": "https://atcoder.jp/contests/arc042/tasks/arc042_a",
+            "directory": {
+                "path": "./",
+                "testdir": "tests",
+                "submit": "main.py"
+            }
+        },
+        {
+            "id": "arc042_b",
+            "label": "B",
+            "title": "\u30a2\u30ea\u306e\u9ad8\u6a4b\u304f\u3093",
+            "url": "https://atcoder.jp/contests/arc042/tasks/arc042_b"
+        },
+        {
+            "id": "arc042_c",
+            "label": "C",
+            "title": "\u304a\u3084\u3064",
+            "url": "https://atcoder.jp/contests/arc042/tasks/arc042_c"
+        },
+        {
+            "id": "arc042_d",
+            "label": "D",
+            "title": "\u3042\u307e\u308a",
+            "url": "https://atcoder.jp/contests/arc042/tasks/arc042_d"
+        }
+    ]
+}

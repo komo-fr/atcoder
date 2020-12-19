@@ -1,29 +1,21 @@
 #!/usr/bin/env python3
-from collections import Counter
-import numpy as np
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import shortest_path
+from collections import defaultdict
 
 N, X, Y = list(map(int, input().split()))
+counter = defaultdict(lambda: 0)
 
-adj = np.zeros((N, N))
-
-for i in range(N - 1):
-    # print(f"({i}, {i+1})")
-    adj[i][i + 1] = 1
-    adj[i + 1][i] = 1
-
-adj[X - 1][Y - 1] = 1
-adj[Y - 1][X - 1] = 1
-
-# print(adj)
-
-csr = csr_matrix(adj)
-d_matrix = shortest_path(csr, method="FW")
-
-# print(f"{d_matrix=}")
-
-counter = Counter(d_matrix.flatten().tolist())
+for i in range(1, N + 1):
+    for j in range(i + 1, N + 1):
+        if i == X and j == Y:
+            d = 1
+        elif (i <= X and j <= X) or (i >= Y and j >= Y):
+            d = j - i
+        else:
+            d_0 = j - i
+            d_1 = abs(i - X) + abs(j - Y) + 1
+            d_2 = abs(i - Y) + abs(j - X) + 1
+            d = min([d_0, d_1, d_2])
+        counter[d] += 1
 
 for k in range(1, N):
-    print(counter[k] // 2)
+    print(counter[k])
