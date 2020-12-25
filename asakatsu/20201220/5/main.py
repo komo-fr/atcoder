@@ -34,58 +34,63 @@ class UnionFind:
 uf = UnionFind(N)
 com2counter = defaultdict(lambda: defaultdict(lambda: 0))
 # student2com = {idx: idx for idx in range(N)}
-student2com = defaultdict(lambda: None)
 com_id = 0
 for _ in range(Q):
     q = list(map(int, input().split()))
     # print(f"{q=}")
-    # print(f"{uf.parents}")
+    print("----------------------")
+    print(f"全体: {com2counter=}")
     if q[0] == 1:
         # 合流
         x_idx = q[1] - 1
         y_idx = q[2] - 1
-        uf.union(x_idx, y_idx)
-        # クラスの人数を統合する
+        # 生徒が今いる集団
+        com_id_1 = uf.find(x_idx)
+        com_id_2 = uf.find(y_idx)
+        if com_id_1 == com_id_2:
+            # 同じ集団だったら何もしない
+            continue
+        print(f"統合前: {com_id_1=}, {com_id_2=}")
+        # 生徒が所属するクラス
         class_1 = c_list[x_idx]
         class_2 = c_list[y_idx]
-        if student2com[x_idx] is None and student2com[y_idx] is None:
-            # 新しい集団
-            # print("新しい集団")
-            com_id += 1
-            com2counter[com_id]["total"] = 2
-            com2counter[com_id][class_1] += 1
-            com2counter[com_id][class_2] += 1
-            student2com[x_idx] = com_id
-            student2com[y_idx] = com_id
-        elif student2com[x_idx] is not None and student2com[y_idx] is None:
-            com2counter[com_id]["total"] += 1
-            com2counter[com_id][class_2] += 1
-            student2com[y_idx] = student2com[x_idx]
-        elif student2com[x_idx] is None and student2com[y_idx] is not None:
-            com2counter[com_id]["total"] += 1
-            com2counter[com_id][class_1] += 1
-            student2com[x_idx] = student2com[y_idx]
+
+        if com2counter[com_id_1]["total"] == 0:
+            com2counter[com_id_1]["total"] = 1
+            com2counter[com_id_1][class_1] += 1
+        if com2counter[com_id_2]["total"] == 0:
+            com2counter[com_id_2]["total"] = 1
+            com2counter[com_id_2][class_2] = 1
+
+        # 小さい方のコミュニティ
+        if com2counter[com_id_1]["total"] <= com2counter[com_id_2]["total"]:
+            small_com_id = com_id_1
+            big_com_id = com_id_2
         else:
-            com_id_1 = student2com[x_idx]
-            com_id_2 = student2com[y_idx]
-            if com_id_1 == com_id_2:
+            small_com_id = com_id_2
+            big_com_id = com_id_1
+        print(
+            f"{small_com_id=}({com2counter[small_com_id]['total']}), {big_com_id=},({com2counter[big_com_id]['total']})"
+        )
+
+        # 統合
+        uf.union(x_idx, y_idx)
+        print(f"統合後コピー前({big_com_id}): {com2counter[big_com_id]}")
+        for k, v in com2counter[small_com_id].items():
+            if k in ["total"]:
                 continue
-            # 小さい方のコミュニティ
-            if com2counter[com_id_1]["total"] <= com2counter[com_id_2]["total"]:
-                small_com_id = com_id_1
-                big_com_id = com_id_2
-                student2com[x_idx] = com_id_2
-            else:
-                small_com_id = com_id_2
-                big_com_id = com_id_1
-                student2com[y_idx] = com_id_1
-            for k, v in com2counter[small_com_id].items():
-                com2counter[big_com_id][k] += com2counter[small_com_id][k]
-            com2counter[big_com_id]["total"] += com2counter[small_com_id]["total"]
+            # 小さい方の集団の情報を大きい方の集団にコピー
+            com2counter[big_com_id][k] += com2counter[small_com_id][k]
+        print(f"統合後コピー後({big_com_id}): {com2counter[big_com_id]}")
+
+        # 合計を更新
+        print(f"合計を更新前: {com2counter[big_com_id]['total']}")
+        com2counter[big_com_id]["total"] += com2counter[small_com_id]["total"]
+        print(f"合計を更新後: {com2counter[big_com_id]['total']}")
 
     else:
         x_idx = q[1] - 1
         y_class = q[2]
-        target_com_id = student2com[x_idx]
+        target_com_id = uf.find(x_idx)
         student_n = com2counter[target_com_id][y_class]
         print(student_n)
