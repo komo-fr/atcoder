@@ -1,0 +1,38 @@
+{
+    "contest": {
+        "id": "indeednow-quala",
+        "title": "Indeed\u306a\u3046\uff08\u4e88\u9078A\uff09",
+        "url": "https://atcoder.jp/contests/indeednow-quala"
+    },
+    "tasks": [
+        {
+            "id": "indeednow_2015_quala_1",
+            "label": "A",
+            "title": "\u639b\u3051\u7b97\u306e\u7b46\u7b97",
+            "url": "https://atcoder.jp/contests/indeednow-quala/tasks/indeednow_2015_quala_1"
+        },
+        {
+            "id": "indeednow_2015_quala_2",
+            "label": "B",
+            "title": "Indeed\u306a\u3046\uff01",
+            "url": "https://atcoder.jp/contests/indeednow-quala/tasks/indeednow_2015_quala_2"
+        },
+        {
+            "id": "indeednow_2015_quala_3",
+            "label": "C",
+            "title": "\u8aac\u660e\u4f1a",
+            "url": "https://atcoder.jp/contests/indeednow-quala/tasks/indeednow_2015_quala_3",
+            "directory": {
+                "path": "./",
+                "testdir": "tests",
+                "submit": "main.py"
+            }
+        },
+        {
+            "id": "indeednow_2015_quala_4",
+            "label": "D",
+            "title": "\u30d1\u30ba\u30eb",
+            "url": "https://atcoder.jp/contests/indeednow-quala/tasks/indeednow_2015_quala_4"
+        }
+    ]
+}

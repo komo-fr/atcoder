@@ -2,16 +2,13 @@
 from collections import Counter
 
 S = input()
-s = S.replace("W", "0")
-s = s.replace("B", "1")
-
-s_list = [int(char) for char in s]
-N = len(s_list)
 count = 0
-for i in range(N):
-    for j in range(N - i - 1):
-        if s_list[j] > s_list[j + 1]:
-            count += 1
-            s_list[j], s_list[j + 1] = s_list[j + 1], s_list[j]
+left_b_count = 0
+for char in S:
+    if char == "B":
+        left_b_count += 1
+    else:
+        count += left_b_count
+
 ans = count
 print(ans)
