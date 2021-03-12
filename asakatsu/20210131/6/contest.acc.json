@@ -1,0 +1,38 @@
+{
+    "contest": {
+        "id": "abc041",
+        "title": "AtCoder Beginner Contest 041",
+        "url": "https://atcoder.jp/contests/abc041"
+    },
+    "tasks": [
+        {
+            "id": "abc041_a",
+            "label": "A",
+            "title": "\u6dfb\u5b57",
+            "url": "https://atcoder.jp/contests/abc041/tasks/abc041_a"
+        },
+        {
+            "id": "abc041_b",
+            "label": "B",
+            "title": "\u76f4\u65b9\u4f53",
+            "url": "https://atcoder.jp/contests/abc041/tasks/abc041_b"
+        },
+        {
+            "id": "abc041_c",
+            "label": "C",
+            "title": "\u80cc\u306e\u9806",
+            "url": "https://atcoder.jp/contests/abc041/tasks/abc041_c"
+        },
+        {
+            "id": "abc041_d",
+            "label": "D",
+            "title": "\u5f92\u7af6\u8d70",
+            "url": "https://atcoder.jp/contests/abc041/tasks/abc041_d",
+            "directory": {
+                "path": "./",
+                "testdir": "tests",
+                "submit": "main.py"
+            }
+        }
+    ]
+}
