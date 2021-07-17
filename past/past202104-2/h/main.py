@@ -52,10 +52,6 @@ for kankiri_N in range(max_k+1):
     # kankiri_N = 手持ちの缶切りの数
     # print("==============")
     # print(f"前ステップでの最小: {each_step_min_cost_list[-1]}")
-    
-    X = K * kankiri_N  # あけられる要缶切りの数
-    x = 0
-    kankiri_cost = kankiri_N * Q  # 缶切りのコスト
 
     if kankiri_N == 0:
         if a_can_n < M:
@@ -77,9 +73,7 @@ for kankiri_N in range(max_k+1):
             # 入れ変えた場合のコスト
             diff_cost = removed_a_can_cost - additional_b_can_cost
             tmp_cost -= diff_cost
-            # print(f"A缶（{removed_a_can_cost}）->B缶({additional_b_can_cost}) よって{diff_cost}削減して{tmp_cost}")
-           
-            
+            # print(f"A缶（{removed_a_can_cost}）->B缶({additional_b_can_cost}) よって{diff_cost}削減して{tmp_cost}")    
             this_step_min_cost = min([this_step_min_cost, tmp_cost])
     each_step_min_cost_list.append(this_step_min_cost)    
 
