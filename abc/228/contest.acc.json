@@ -20,13 +20,23 @@
       "id": "abc228_b",
       "label": "B",
       "title": "Takahashi's Secret",
-      "url": "https://atcoder.jp/contests/abc228/tasks/abc228_b"
+      "url": "https://atcoder.jp/contests/abc228/tasks/abc228_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc228_c",
       "label": "C",
       "title": "Final Day",
-      "url": "https://atcoder.jp/contests/abc228/tasks/abc228_c"
+      "url": "https://atcoder.jp/contests/abc228/tasks/abc228_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc228_d",
