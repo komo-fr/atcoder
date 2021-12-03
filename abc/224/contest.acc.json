@@ -31,7 +31,12 @@
       "id": "abc224_c",
       "label": "C",
       "title": "Triangle?",
-      "url": "https://atcoder.jp/contests/abc224/tasks/abc224_c"
+      "url": "https://atcoder.jp/contests/abc224/tasks/abc224_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc224_d",
