@@ -26,7 +26,12 @@
       "id": "abc196_c",
       "label": "C",
       "title": "Doubled",
-      "url": "https://atcoder.jp/contests/abc196/tasks/abc196_c"
+      "url": "https://atcoder.jp/contests/abc196/tasks/abc196_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc196_d",
