@@ -26,7 +26,12 @@
       "id": "abc200_c",
       "label": "C",
       "title": "Ringo's Favorite Numbers 2",
-      "url": "https://atcoder.jp/contests/abc200/tasks/abc200_c"
+      "url": "https://atcoder.jp/contests/abc200/tasks/abc200_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc200_d",

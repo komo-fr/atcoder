@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-
+from collections import defaultdict
+import math
 N = int(input().split()[0])
 a_list = list(map(int, input().split()))
+
+count_dict = defaultdict(lambda: 0)
+for a in a_list:
+    count_dict[a % 200] += 1
+
+def C(n, r):
+    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+
 count = 0
-for i in range(N):
-    if i == N - 1:
-        break
-    for j in range(i+1, N):
-        a = a_list[i] - a_list[j]
-        if a % 200 == 0:
-            count += 1
+for v in count_dict.values():
+    if v >= 2:
+        count += C(v, 2)
+
 ans = count
 print(ans)
