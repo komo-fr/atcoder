@@ -26,7 +26,12 @@
       "id": "abc195_c",
       "label": "C",
       "title": "Comma",
-      "url": "https://atcoder.jp/contests/abc195/tasks/abc195_c"
+      "url": "https://atcoder.jp/contests/abc195/tasks/abc195_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc195_d",
