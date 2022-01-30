@@ -26,7 +26,12 @@
       "id": "abc193_c",
       "label": "C",
       "title": "Unexpressed",
-      "url": "https://atcoder.jp/contests/abc193/tasks/abc193_c"
+      "url": "https://atcoder.jp/contests/abc193/tasks/abc193_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc193_d",
