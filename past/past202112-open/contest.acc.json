@@ -44,7 +44,12 @@
       "id": "past202112_f",
       "label": "F",
       "title": "Like As Shogi",
-      "url": "https://atcoder.jp/contests/past202112-open/tasks/past202112_f"
+      "url": "https://atcoder.jp/contests/past202112-open/tasks/past202112_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202112_g",
