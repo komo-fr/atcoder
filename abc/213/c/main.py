@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-from collections import defaultdict
 
 H, W, N = list(map(int, input().split()))
 
-ab_table = []
-
-row_dict = defaultdict(lambda: [])
-col_dict = defaultdict(lambda: [])
 p_dict = {}
 a_list = []
 b_list = []
@@ -17,8 +12,8 @@ for i in range(N):
     a_list.append(a)
     b_list.append(b)
 
-a_list = sorted(a_list)
-b_list = sorted(b_list)
+a_list = sorted(list(set(a_list)))
+b_list = sorted(list(set(b_list)))
 
 new_row_dict = {}
 
