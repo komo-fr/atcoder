@@ -8,38 +8,32 @@ ab_table = []
 row_dict = defaultdict(lambda: [])
 col_dict = defaultdict(lambda: [])
 p_dict = {}
+a_list = []
+b_list = []
 
 for i in range(N):
     a, b = list(map(int, input().split()))
-    row_dict[a].append(i + 1)
-    col_dict[b].append(i + 1)
     p_dict[i + 1] = (a, b)
+    a_list.append(a)
+    b_list.append(b)
+
+a_list = sorted(a_list)
+b_list = sorted(b_list)
 
 new_row_dict = {}
+
+for i, a in enumerate(a_list):
+    new_row_dict[a] = i + 1
+
 new_col_dict = {}
-minus_row = 0
-minus_col = 0
 
-for h in range(1, H + 1):
-    print(h)
-    if not row_dict[h]:
-        # 1つも数字がない
-        minus_row += 1
-    else:
-        # 数字がある
-        new_row_dict[h] = h - minus_row
+for i, b in enumerate(b_list):
+    new_col_dict[b] = i + 1
 
-for w in range(1, W + 1):
-    if not col_dict[w]:
-        # 1つも数字がない
-        minus_col += 1
-    else:
-        # 数字がある
-        new_row_dict[w] = w - minus_col
 
 for i in range(N):
     node = i + 1
     a, b = p_dict[node]
     a = new_row_dict[a]
-    b = new_row_dict[b]
+    b = new_col_dict[b]
     print(a, b)
