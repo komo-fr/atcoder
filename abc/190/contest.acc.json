@@ -26,7 +26,12 @@
       "id": "abc190_c",
       "label": "C",
       "title": "Bowls and Dishes",
-      "url": "https://atcoder.jp/contests/abc190/tasks/abc190_c"
+      "url": "https://atcoder.jp/contests/abc190/tasks/abc190_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc190_d",
