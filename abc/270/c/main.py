@@ -3,7 +3,7 @@ from collections import defaultdict
 from re import A
 import sys
 
-sys.setrecursionlimit(10 ** 5)
+sys.setrecursionlimit(2 * 10 ** 6)
 n, x, y = list(map(int, input().split()))
 edge_dict = defaultdict(lambda: [])
 
