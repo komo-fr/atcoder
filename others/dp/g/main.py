@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 from collections import defaultdict
+import sys
+
+sys.setrecursionlimit(10000000)
 
 N, M = list(map(int, input().split()))
 xy_list = []
