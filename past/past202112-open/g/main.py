@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-import numpy as np
+# import numpy as np
 from collections import defaultdict, deque
 
 N, Q = list(map(int, input().split()))
 q_list = []
-d_table = np.zeros((N, N))
+#  d_table = np.zeros((N, N))
+d_table = [[0] * N for _ in range(N)]
 
 
 def is_connected(start, end, d_table):
