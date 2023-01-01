@@ -2,8 +2,8 @@
 
 S = input().split()[0]
 
-for i in range(len(S)):
-    s = S[: i + 1]
+for i in range(1, len(S)):
+    s = S[: len(S) - i]
     n = len(s)
     if n % 2:
         continue
