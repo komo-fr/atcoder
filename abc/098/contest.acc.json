@@ -20,7 +20,12 @@
       "id": "abc098_b",
       "label": "B",
       "title": "Cut and Count",
-      "url": "https://atcoder.jp/contests/abc098/tasks/abc098_b"
+      "url": "https://atcoder.jp/contests/abc098/tasks/abc098_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc098_a",
