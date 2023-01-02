@@ -26,7 +26,11 @@
       "id": "keyence2020_c",
       "label": "C",
       "title": "Subarray Sum",
-      "url": "https://atcoder.jp/contests/keyence2020/tasks/keyence2020_c"
+      "url": "https://atcoder.jp/contests/keyence2020/tasks/keyence2020_c",
+      "directory": {
+        "path": "c",
+        "submit": "main.py"
+      }
     },
     {
       "id": "keyence2020_d",
