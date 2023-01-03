@@ -14,5 +14,8 @@ for _ in range(N):
     else:
         max_y = min([y, max_y])
 
-ans = max([(max_x - min_x) * (max_y - min_y), 0])
+if max_x <= 0 or min_x >= W or max_y <= 0 or min_y >= H:
+    ans = 0
+else:
+    ans = max([(max_x - min_x) * (max_y - min_y), 0])
 print(ans)
