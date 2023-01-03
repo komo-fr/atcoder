@@ -6,13 +6,13 @@ max_x, max_y = W, H
 for _ in range(N):
     x, y, a = list(map(int, input().split()))
     if a == 1:
-        min_x = x
+        min_x = max([x, min_x])
     elif a == 2:
-        max_x = x
+        max_x = min([x, max_x])
     elif a == 3:
-        min_y = y
+        min_y = max([y, min_y])
     else:
-        max_y = y
+        max_y = min([y, max_y])
 
 ans = max([(max_x - min_x) * (max_y - min_y), 0])
 print(ans)
