@@ -16,12 +16,12 @@ for i in range(N):
     if i == 0:
         cumsum_list.append(a_list[0])
         continue
-    x = cumsum_list[i-1] + a_list[i]
+    x = cumsum_list[i - 1] + a_list[i]
     cumsum_list.append(x)
 
 for lr in lr_list:
     if lr[0] == 1:
-        x = cumsum_list[lr[1]-1]
+        x = cumsum_list[lr[1] - 1]
     else:
-        x = cumsum_list[lr[1]-1] - cumsum_list[lr[0]-2]
+        x = cumsum_list[lr[1] - 1] - cumsum_list[lr[0] - 2]
     print(x)
