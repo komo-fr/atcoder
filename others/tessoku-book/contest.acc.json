@@ -89,7 +89,12 @@
       "id": "tessoku_book_k",
       "label": "A11",
       "title": "Binary Search 1",
-      "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k"
+      "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k",
+      "directory": {
+        "path": "a11",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tessoku_book_l",

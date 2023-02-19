@@ -1,6 +1,6 @@
 - 自分の得点状況: https://atcoder.jp/contests/tessoku-book/score
 
-## 累積和
+## 2.累積和
 
 |対応目次 | 提出| メモ|
 |:-----|:-----|:----- |
@@ -9,4 +9,8 @@
 |2.3 二次元の累積和(1) | [A08](https://atcoder.jp/contests/tessoku-book/submissions/38995733) | ・二次元の累積和は、横方向の累積和を計算してから縦方向に足す<br>・長方形の和は、 `Z(x1, y1) + Z(x0-1, y0-1) - Z(x1, y0-1) - Z(x0-1, y1) `<br>・x軸とy軸を間違えないようにする（問題文では `(y, x)`） |
 |2.4 二次元の累積和(2) | [A09](https://atcoder.jp/contests/tessoku-book/submissions/39036343) | ・差分テーブルを作る（ `(x0, y0)` と `(x1+1, y1+1)` で+1、 `(x0, y1+1)`と `(x1+1, y0)`で-1）<br>・A08同様、二次元の累積和を作る（横方向の累積和を計算してから縦方向に足す）|
 
+## 3.二分探索
 
+|対応目次 | 提出| メモ|
+|:-----|:-----|:----- |
+|3.1 配列の二分探索 | [A11](https://atcoder.jp/contests/tessoku-book/submissions/39038100) | ・`bisect.bisect_left(リスト, 値)`で値を挿入できるインデックスを取得する（同じ値が複数ある場合は左端）|
