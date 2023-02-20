@@ -16,3 +16,4 @@
 |3.1 配列の二分探索 | [A11](https://atcoder.jp/contests/tessoku-book/submissions/39038100) | ・`bisect.bisect_left(リスト, 値)`で値を挿入できるインデックスを取得する（同じ値が複数ある場合は左端）|
 |3.2 答えで二分探索 | [A12](https://atcoder.jp/contests/tessoku-book/submissions/39055035) | ・「`f(x)`が単調増加or単調減少する」「`f(x) = N`となるような`x`を求めたい」時は、二分探索が使える<br>・`left=xの下限`, `right=xの上限`で探索する<br>・探索中、各`x`を使って`f(x)`を計算し、欲しい答えの条件を満たすかどうかを確認する|
 |3.3 しゃくとり法 | [A13](https://atcoder.jp/contests/tessoku-book/submissions/39077200)（二分探索による解き方） | ・全探索では間に合わない<br>・リストから、条件を満たす（`K <= A1 - A2`を満たす`A2`)値を二分探索で探す<br>・組み合わせの数は、`A2のインデックス - A1のインデックス`で計算できる |
+| 同上 | A13（しゃくとり法による解き方 [for版](https://atcoder.jp/contests/tessoku-book/submissions/39077472)） | ・先頭を0からN-1まで1ずつ動かす（A1）<br>・末尾を`前回の末尾`から、`条件を満たすギリギリの値`まで1ずつ動かす（A2）<br>・上記同様、組み合わせの数は`A2のインデックス - A1のインデックス`になる |
