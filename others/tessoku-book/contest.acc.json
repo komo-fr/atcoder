@@ -122,7 +122,12 @@
       "id": "tessoku_book_n",
       "label": "A14",
       "title": "Four Boxes",
-      "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_n"
+      "url": "https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_n",
+      "directory": {
+        "path": "a14",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tessoku_book_o",
