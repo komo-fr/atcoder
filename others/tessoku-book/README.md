@@ -23,6 +23,7 @@
 
 |対応目次 | 提出| メモ|
 |:-----|:-----|:----- |
-|4.1 動的計画法の基本 | [A16]() | ・（前から見る方法） `dp[i-1] + a` と `dp[i-2] + b` で小さい方を採用する|
+|4.1 動的計画法の基本 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | ・（前から見る方法） `dp[i-1] + a` と `dp[i-2] + b` で小さい方を採用する|
 |4.2 動的計画法の復元| [A17](https://atcoder.jp/contests/tessoku-book/submissions/39126289) | ・A16と同じ方法で`dp`を作成<br>・ゴールから辿ってルートを復元する<br>・具体的には、 `dp[i-1] + a`と `dp[i-2] + b`を見て小さい方をルートリストに追加する|
+|4.3 二次元のDP（1）: 部分和問題| [A18](https://atcoder.jp/contests/tessoku-book/submissions/39158561) | ・縦方向: 何番目の数字まで考えるか（`N+1`個用意）<br>・横方向: 合計値（`S+1`個用意）<br>・値: `i`番目の数字まで考えた時に、合計値を`j`にすることが可能か（`True`/`False`）<br>・更新方法: `dp[i-1][j]`が `True`なら、`dp[i][j]`と`dp[i][j+a]`は`True`（`i`番目の数字を足さなかったケースと足したケース）|
 
