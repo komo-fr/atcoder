@@ -26,4 +26,5 @@
 |4.1 動的計画法の基本 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | ・（前から見る方法） `dp[i-1] + a` と `dp[i-2] + b` で小さい方を採用する|
 |4.2 動的計画法の復元| [A17](https://atcoder.jp/contests/tessoku-book/submissions/39126289) | ・A16と同じ方法で`dp`を作成<br>・ゴールから辿ってルートを復元する<br>・具体的には、 `dp[i-1] + a`と `dp[i-2] + b`を見て小さい方をルートリストに追加する|
 |4.3 二次元のDP（1）: 部分和問題| [A18](https://atcoder.jp/contests/tessoku-book/submissions/39158561) | ・縦方向: 何番目の数字まで考えるか（`N+1`個用意）<br>・横方向: 合計値（`S+1`個用意）<br>・値: `i`番目の数字まで考えた時に、合計値を`j`にすることが可能か（`True`/`False`）<br>・更新方法: `dp[i-1][j]`が `True`なら、`dp[i][j]`と`dp[i][j+a]`は`True`（`i`番目の数字を足さなかったケースと足したケース）|
+|4.5 二次元のDP（2）: 最長共通部分列問題| [A20](https://atcoder.jp/contests/tessoku-book/submissions/39158561) | ・縦方向: 文字列S（先頭は空文字で、`S+1`個用意）<br>・横方向: 文字列（先頭は空文字で、`R+1`個用意）<br>・値: これまでの斜め方向移動の回数<br>・更新方法: 縦方向から来た場合（ `dp[i - 1][j]` ）と横方向から来た場合（ `dp[i][j-1]` ）と斜め方向から来た場合（ `dp[i-1][j-1] + 1` ）の最小値<br>・`Si`と`Tj`が同じ文字の時だけ斜め移動が可能 |
 
