@@ -1,0 +1,104 @@
+{
+  "contest": {
+    "id": "past16-open",
+    "title": "第16回 アルゴリズム実技検定(過去問)",
+    "url": "https://atcoder.jp/contests/past16-open"
+  },
+  "tasks": [
+    {
+      "id": "past202309_a",
+      "label": "A",
+      "title": "swallow",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "past202309_b",
+      "label": "B",
+      "title": "Slot",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_b"
+    },
+    {
+      "id": "past202309_c",
+      "label": "C",
+      "title": "Programming Contest",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_c"
+    },
+    {
+      "id": "past202309_d",
+      "label": "D",
+      "title": "Relative Score",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_d"
+    },
+    {
+      "id": "past202309_e",
+      "label": "E",
+      "title": "<=10^n",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_e"
+    },
+    {
+      "id": "past202309_f",
+      "label": "F",
+      "title": "Evaluate Formula",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_f"
+    },
+    {
+      "id": "past202309_g",
+      "label": "G",
+      "title": "N triangles",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_g"
+    },
+    {
+      "id": "past202309_h",
+      "label": "H",
+      "title": "Vacation",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_h"
+    },
+    {
+      "id": "past202309_i",
+      "label": "I",
+      "title": "Candies",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_i"
+    },
+    {
+      "id": "past202309_j",
+      "label": "J",
+      "title": "Joya no Kane",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_j"
+    },
+    {
+      "id": "past202309_k",
+      "label": "K",
+      "title": "Grid",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_k"
+    },
+    {
+      "id": "past202309_l",
+      "label": "L",
+      "title": "Average queries",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_l"
+    },
+    {
+      "id": "past202309_m",
+      "label": "M",
+      "title": "Intersection of Line Segments",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_m"
+    },
+    {
+      "id": "past202309_n",
+      "label": "N",
+      "title": "Sorting and Function",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_n"
+    },
+    {
+      "id": "past202309_o",
+      "label": "O",
+      "title": "Add Sequences",
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_o"
+    }
+  ]
+}
