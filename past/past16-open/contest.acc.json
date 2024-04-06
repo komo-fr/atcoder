@@ -26,7 +26,12 @@
       "id": "past202309_c",
       "label": "C",
       "title": "Programming Contest",
-      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_c"
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202309_d",
