@@ -20,7 +20,12 @@
       "id": "past202309_b",
       "label": "B",
       "title": "Slot",
-      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_b"
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202309_c",
