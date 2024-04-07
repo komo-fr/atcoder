@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-N = int(input().split()[0])
-keta = len(str(N))
+N = input().strip()
+keta = len(N)
 
-if N == 10 ** (keta-1):
-    ans = keta -1
+if N == "1" + "0" * (keta-1):
+    ans = keta - 1
 else:
     ans = keta
-
 print(ans)
