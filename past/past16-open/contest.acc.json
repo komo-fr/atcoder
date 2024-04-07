@@ -64,7 +64,12 @@
       "id": "past202309_f",
       "label": "F",
       "title": "Evaluate Formula",
-      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_f"
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202309_g",
