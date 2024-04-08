@@ -60,7 +60,7 @@ for pattern in p_list:
     for index_tuple in pattern:
         # print("🐳", index_tuple)
         x_list = [a_list[i] for i in index_tuple]
-        sorted(x_list)
+        x_list.sort()
         if x_list[0] + x_list[1] <= x_list[2]:
             is_ok = False
             break
