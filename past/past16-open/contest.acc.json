@@ -86,7 +86,12 @@
       "id": "past202309_h",
       "label": "H",
       "title": "Vacation",
-      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_h"
+      "url": "https://atcoder.jp/contests/past16-open/tasks/past202309_h",
+      "directory": {
+        "path": "h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past202309_i",
