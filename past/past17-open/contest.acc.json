@@ -55,7 +55,11 @@
       "id": "past17_g",
       "label": "G",
       "title": "Find the Snaky",
-      "url": "https://atcoder.jp/contests/past17-open/tasks/past17_g"
+      "url": "https://atcoder.jp/contests/past17-open/tasks/past17_g",
+      "directory": {
+        "path": "g",
+        "submit": "main.py"
+      }
     },
     {
       "id": "past17_h",
